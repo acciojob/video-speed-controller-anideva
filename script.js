@@ -1,9 +1,38 @@
-const inputs = document.querySelectorAll('.controls input');
+const video= document.querySelector('.viewer');
+const toggle= document.querySelector('.toggle');
+const progress= document.querySelector('.progress');
+const progressFilled= document.querySelector('.progress__filled');
+const volume= document.querySelector('.volume');
+const playbackspeed=document.querySelector('.playbackspeed');
+const rewind= document.querySelector('.rewind');
+const forward= document.querySelector('.forward');
 
-    function handleUpdate() {
-      const suffix = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-    }
+//toggle play/pause
+function toggleplay(){
+	if(video.paused){
+		video.play();
+		toggle.textContent='❚ ❚'; //pause icon
+		
+	} else{
+		video.pause();
+		toggle.textContent='►'; //play button
+		
+	}
+}
 
-    inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+//update progress bar as video plays 
+function updateProgress(){
+	const percent = (video.currentTime/video.duration) * 100;
+	progressFilled.style.width =`${percent}%`;
+	
+}
+//set video time when user clicks on progress bar 
+function updateProgress(){
+	const percent =(video.currentTime/video.duration)*100;
+	progressFilled.style.width=`${percent}`%;
+	
+}
+// set video time when user clicks on progress bar 
+function setProgress(e) {
+	const newTime= (e)
+}
