@@ -34,5 +34,32 @@ function updateProgress(){
 }
 // set video time when user clicks on progress bar 
 function setProgress(e) {
-	const newTime= (e)
+	const newTime= (e.offsetX / progress.offsetWidth) * video.duration;
+	video.currentTime= newTime;
 }
+//volume control
+volume.addEventListener('input', ()=>{
+	video.volume=volume.value;
+
+});
+
+//playbackspeed control
+playbackspeed.addEventListener(`input`, () =>{
+	video.playbackRate= playbackspeed.value;
+});
+
+//rewind 10 sec
+rewind.addEventListener('click', () =>{
+	video.currentTime -= 10;
+});
+
+//forward 25s
+forward.addEventListener('click', () =>{
+video.currentTime +=25;
+});
+
+//event listeners for the play and pause 
+toggle.addEventListener('click', toggleplay);
+video.addEventListener('click',toggleplay);
+video.addEventListener('timeUpdate', updateProgress);
+progress.addEventListener('click', setProgress);
