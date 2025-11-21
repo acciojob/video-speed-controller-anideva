@@ -3,7 +3,7 @@ const toggle = document.querySelector('.toggle');
 const progress = document.querySelector('.progress');
 const progressFilled = document.querySelector('.progress__filled');
 const volume = document.querySelector('.volume');
-const playbackspeed = document.querySelector('.playbackspeed');
+const playbackSpeed = document.querySelector('.playbackSpeed');
 const rewind = document.querySelector('.rewind');
 const forward = document.querySelector('.forward');
 
@@ -44,7 +44,7 @@ volume.addEventListener('input', () => {
 
 // Playback speed control
 playbackspeed.addEventListener('input', () => {
-	video.playbackRate = playbackspeed.value;
+	video.playbackRate = playbackSpeed.value;
 });
 
 // Rewind 10 sec

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Video Speed Scrubber</title>
+  <title>Video Speed Controller</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -10,7 +10,7 @@
 	<video class="viewer" width="600" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
 		<!-- progress bar -->
 	<div class="progress">
-		<div class="progress__filled"> </div>
+		<div class="progress__filled">►</div>
 	</div>
 	<!-- controls -->
 	<button class="player__button toggle"> </button>
@@ -21,12 +21,12 @@
 	 <br><br>
 
 	volume:
-	<input type="range" class="volume" min="0" max="1" step="0.5" value="1">
+	<input type="range" class="volume" min="0" max="1" step="0.05" value="1">
 
 	<br><br>
 
 	speed:
-	<input type ="range" class="playbackspeed" min="0.5" max="3" step="0.1" value="1">
+	<input type ="range" class="playbackSpeed" min="0.5" max="3" step="0.1" value="1">
 	
   <!-- javascript  -->
 <script src="script.js"></script>
