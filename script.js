@@ -43,7 +43,7 @@ volume.addEventListener('input', () => {
 });
 
 // Playback speed control
-playbackpeed.addEventListener('input', () => {
+playbackSpeed.addEventListener('input', () => {
 	video.playbackRate = playbackSpeed.value;
 });
 
